@@ -1,0 +1,9 @@
+c:\users\felipe.andrade\documents\visual studio 2013\Projects\ExercicioComplementar\ExercicioComplementar\bin\Debug\ExercicioComplementar.exe.config
+c:\users\felipe.andrade\documents\visual studio 2013\Projects\ExercicioComplementar\ExercicioComplementar\bin\Debug\ExercicioComplementar.exe
+c:\users\felipe.andrade\documents\visual studio 2013\Projects\ExercicioComplementar\ExercicioComplementar\bin\Debug\ExercicioComplementar.pdb
+c:\users\felipe.andrade\documents\visual studio 2013\Projects\ExercicioComplementar\ExercicioComplementar\obj\Debug\ExercicioComplementar.csprojResolveAssemblyReference.cache
+c:\users\felipe.andrade\documents\visual studio 2013\Projects\ExercicioComplementar\ExercicioComplementar\obj\Debug\ExercicioComplementar.exe
+c:\users\felipe.andrade\documents\visual studio 2013\Projects\ExercicioComplementar\ExercicioComplementar\obj\Debug\ExercicioComplementar.pdb
+C:\Users\felipe.andrade\Documents\Visual Studio 2013\Projects\ExercicioComplementar\ExerciciosComplementares\ExercicioComplementar\bin\Debug\ExercicioComplementar.exe.config
+C:\Users\felipe.andrade\Documents\Visual Studio 2013\Projects\ExercicioComplementar\ExerciciosComplementares\ExercicioComplementar\obj\Debug\ExercicioComplementar.exe
+C:\Users\felipe.andrade\Documents\Visual Studio 2013\Projects\ExercicioComplementar\ExerciciosComplementares\ExercicioComplementar\obj\Debug\ExercicioComplementar.pdb
