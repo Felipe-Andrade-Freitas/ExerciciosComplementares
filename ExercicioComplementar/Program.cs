@@ -10,15 +10,13 @@ namespace ExercicioComplementar
     {
         static void Main(string[] args)
         {
+            #region Variaveis
             //Variáveis
-            double valorInvestido;
-            double Poupanca;
-            double rendaFixa;
+            double valorInvestido, Poupanca, rendaFixa;
             int meses;
 
             //Variáveis relacionado a Poupança
-            double TotalPoupanca;
-            double valorFinalPoupanca;
+            double TotalPoupanca, valorFinalPoupanca;
             string op1 = "Poupança";
 
             //Variáveis relacionado a Renda Fixa
@@ -28,6 +26,7 @@ namespace ExercicioComplementar
             double impostoDeRenda;
             double valorRendaFixaImpostoRenda;
             string op2 = "Renda Fixa";
+            #endregion
 
             //Iniciando a Calculadora Financeira
             Console.WriteLine("Bem Vindo á Calculadora Financeira");
@@ -151,7 +150,7 @@ namespace ExercicioComplementar
                 Console.WriteLine("O valor do seu investimento mais o seu valor aplicado menos o imposto será de R$" + valorFinalRendaFixaImposto + ".");
                 Console.WriteLine("");
                 Console.WriteLine("");
-                Console.WriteLine("Opção de investimento: ");
+                Console.WriteLine("Opção de investimento: .");
                 Console.WriteLine("");
                 if (valorFinalPoupanca > valorFinalRendaFixaImposto)
                 {
