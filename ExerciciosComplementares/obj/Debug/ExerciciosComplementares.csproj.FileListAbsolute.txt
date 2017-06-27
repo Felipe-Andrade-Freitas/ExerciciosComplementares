@@ -1,0 +1,6 @@
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExerciciosComplementares\obj\Debug\ExerciciosComplementares.csprojResolveAssemblyReference.cache
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExerciciosComplementares\bin\Debug\ExerciciosComplementares.exe.config
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExerciciosComplementares\bin\Debug\ExerciciosComplementares.exe
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExerciciosComplementares\bin\Debug\ExerciciosComplementares.pdb
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExerciciosComplementares\obj\Debug\ExerciciosComplementares.exe
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExerciciosComplementares\obj\Debug\ExerciciosComplementares.pdb

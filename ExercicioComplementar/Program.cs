@@ -12,15 +12,14 @@ namespace ExercicioComplementar
         {
             #region Variaveis
             //Variáveis
-            double valorInvestido, Poupanca, rendaFixa;
-            int meses;
+            double valorAplicado, rendPoupanca, quantMeses;
+            double rendaFixa;
 
             //Variáveis relacionado a Poupança
-            double TotalPoupanca, valorFinalPoupanca;
-            string op1 = "Poupança";
+            double jurosCompPoupanca = 0, juros;
 
             //Variáveis relacionado a Renda Fixa
-            double TotalRendaFixa;
+            double totalRendaFixa;
             double valorFinalRendaFixa;
             double valorFinalRendaFixaImposto;
             double impostoDeRenda;
@@ -35,13 +34,13 @@ namespace ExercicioComplementar
 
             //Entrada de Dados
             Console.Write("Qual o valor a ser aplicado? R$");
-            valorInvestido = double.Parse(Console.ReadLine());
+            valorAplicado = double.Parse(Console.ReadLine());
             Console.Write("Qual a porcentagem dos rendimentos mensais para poupaca? ");
-            Poupanca = double.Parse(Console.ReadLine());
+            rendPoupanca = Math.Round(Convert.ToDouble(Console.ReadLine()),2);
             Console.Write("Qual a porcentagem dos rendimentos mensais para renda fixa? ");
             rendaFixa = double.Parse(Console.ReadLine());
             Console.Write("Qual a quantidade de meses que o dinheiro ficará aplicado? ");
-            meses = int.Parse(Console.ReadLine());
+            quantMeses = int.Parse(Console.ReadLine());
             Console.WriteLine("");
 
             //Saida de Dados
@@ -49,18 +48,28 @@ namespace ExercicioComplementar
             //Poupança
             Console.WriteLine("Poupança: ");
             Console.WriteLine("");
-            TotalPoupanca = Poupanca * valorInvestido * meses / 100;
-            valorFinalPoupanca = TotalPoupanca + valorInvestido;
-            Console.WriteLine("O valor que renderá para poupanca será de R$" + TotalPoupanca + ".");
-            Console.WriteLine("O valor do seu investimento mais o seu valor aplicado será de R$" + valorFinalPoupanca + ".");
+            #region Poupança
+            for (double x = 0; x <= quantMeses; x++)
+            {
+                jurosCompPoupanca = valorAplicado * rendPoupanca * quantMeses / 100;
+            }
+
+            juros = jurosCompPoupanca;
+            jurosCompPoupanca += valorAplicado;
+
+            Console.WriteLine("O valor a receber é: {0}", jurosCompPoupanca);
+            #endregion
+            //valorFinalPoupanca = totalPoupanca + valorInvestido;
+            Console.WriteLine("O valor que renderá para poupanca será de R$" + juros + ".");
+            Console.WriteLine("O valor do seu investimento mais o seu valor aplicado será de R$" + jurosCompPoupanca + ".");
             Console.WriteLine("");
             Console.WriteLine("");
-            
+            /*
             //Renda Fixa
             Console.WriteLine("Renda Fixa: ");
             Console.WriteLine("");
-            TotalRendaFixa = rendaFixa * valorInvestido * meses / 100;
-            valorFinalRendaFixa = TotalRendaFixa + valorInvestido;
+            totalRendaFixa = rendaFixa * valorInvestido * meses / 100;
+            valorFinalRendaFixa = totalRendaFixa + valorInvestido;
             Console.WriteLine("O valor que renderá para renda fixa será de R$" + valorFinalRendaFixa);
             Console.WriteLine("");
             Console.WriteLine("");
@@ -68,9 +77,9 @@ namespace ExercicioComplementar
             //Imposto de Renda
             if(meses <= 12)
             {
-                impostoDeRenda = TotalRendaFixa * 25 / 100;
-                valorRendaFixaImpostoRenda = TotalRendaFixa - impostoDeRenda;
-                valorFinalRendaFixaImposto = TotalRendaFixa + valorInvestido - impostoDeRenda;
+                impostoDeRenda = totalRendaFixa * 25 / 100;
+                valorRendaFixaImpostoRenda = totalRendaFixa - impostoDeRenda;
+                valorFinalRendaFixaImposto = totalRendaFixa + valorInvestido - impostoDeRenda;
                 Console.WriteLine("Imposto de Renda: ");
                 Console.WriteLine("");
                 Console.WriteLine("Você pagara R$" + impostoDeRenda + " de imposto de renda");
@@ -92,9 +101,9 @@ namespace ExercicioComplementar
             }
             else if(meses > 13 && meses > 24)
             {
-                impostoDeRenda = TotalRendaFixa * 15 / 100;
-                valorRendaFixaImpostoRenda = TotalRendaFixa - impostoDeRenda;
-                valorFinalRendaFixaImposto = TotalRendaFixa + valorInvestido - impostoDeRenda;
+                impostoDeRenda = totalRendaFixa * 15 / 100;
+                valorRendaFixaImpostoRenda = totalRendaFixa - impostoDeRenda;
+                valorFinalRendaFixaImposto = totalRendaFixa + valorInvestido - impostoDeRenda;
                 Console.WriteLine("Imposto de Renda: ");
                 Console.WriteLine("");
                 Console.WriteLine("Você pagara R$" + impostoDeRenda + " de imposto de renda");
@@ -116,9 +125,9 @@ namespace ExercicioComplementar
             }
             else if(meses > 25 && meses < 36)
             {
-                impostoDeRenda = TotalRendaFixa * 5 / 100;
-                valorRendaFixaImpostoRenda = TotalRendaFixa - impostoDeRenda;
-                valorFinalRendaFixaImposto = TotalRendaFixa + valorInvestido - impostoDeRenda;
+                impostoDeRenda = totalRendaFixa * 5 / 100;
+                valorRendaFixaImpostoRenda = totalRendaFixa - impostoDeRenda;
+                valorFinalRendaFixaImposto = totalRendaFixa + valorInvestido - impostoDeRenda;
                 Console.WriteLine("Imposto de Renda: ");
                 Console.WriteLine("");
                 Console.WriteLine("Você pagara R$" + impostoDeRenda + " de imposto de renda");
@@ -140,9 +149,9 @@ namespace ExercicioComplementar
             }
             else if(meses > 36)
             {
-                impostoDeRenda = TotalRendaFixa * 1 / 100;
-                valorRendaFixaImpostoRenda = TotalRendaFixa - impostoDeRenda;
-                valorFinalRendaFixaImposto = TotalRendaFixa + valorInvestido - impostoDeRenda;
+                impostoDeRenda = totalRendaFixa * 1 / 100;
+                valorRendaFixaImpostoRenda = totalRendaFixa - impostoDeRenda;
+                valorFinalRendaFixaImposto = totalRendaFixa + valorInvestido - impostoDeRenda;
                 Console.WriteLine("Imposto de Renda: ");
                 Console.WriteLine("");
                 Console.WriteLine("Você pagara R$" + impostoDeRenda + " de imposto de renda");
@@ -162,7 +171,7 @@ namespace ExercicioComplementar
                 }
                 Console.WriteLine("");
             }
-
+            */
             Console.ReadLine();
         }
     }
