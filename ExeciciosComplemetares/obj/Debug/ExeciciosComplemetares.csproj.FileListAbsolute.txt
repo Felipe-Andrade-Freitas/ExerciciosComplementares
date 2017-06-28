@@ -1,0 +1,9 @@
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\bin\Debug\ExeciciosComplemetares.exe.config
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\bin\Debug\ExeciciosComplemetares.exe
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\bin\Debug\ExeciciosComplemetares.pdb
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\obj\Debug\ExeciciosComplemetares.csprojResolveAssemblyReference.cache
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\obj\Debug\ExeciciosComplemetares.Menu.resources
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\obj\Debug\ExeciciosComplemetares.Properties.Resources.resources
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\obj\Debug\ExeciciosComplemetares.csproj.GenerateResource.Cache
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\obj\Debug\ExeciciosComplemetares.exe
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\obj\Debug\ExeciciosComplemetares.pdb
