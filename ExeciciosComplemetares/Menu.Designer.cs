@@ -28,34 +28,76 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.calculadoraFinanceiraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jurosSimplesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jurosCompostoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // menuStrip1
             // 
-            this.button1.Location = new System.Drawing.Point(114, 113);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Teste";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.calculadoraFinanceiraToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(424, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // calculadoraFinanceiraToolStripMenuItem
+            // 
+            this.calculadoraFinanceiraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.jurosSimplesToolStripMenuItem,
+            this.jurosCompostoToolStripMenuItem});
+            this.calculadoraFinanceiraToolStripMenuItem.Name = "calculadoraFinanceiraToolStripMenuItem";
+            this.calculadoraFinanceiraToolStripMenuItem.Size = new System.Drawing.Size(139, 20);
+            this.calculadoraFinanceiraToolStripMenuItem.Text = "Calculadora Financeira";
+            // 
+            // jurosSimplesToolStripMenuItem
+            // 
+            this.jurosSimplesToolStripMenuItem.Name = "jurosSimplesToolStripMenuItem";
+            this.jurosSimplesToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.jurosSimplesToolStripMenuItem.Text = "Juros Simples";
+            // 
+            // jurosCompostoToolStripMenuItem
+            // 
+            this.jurosCompostoToolStripMenuItem.Name = "jurosCompostoToolStripMenuItem";
+            this.jurosCompostoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.jurosCompostoToolStripMenuItem.Text = "Juros Composto";
+            this.jurosCompostoToolStripMenuItem.Click += new System.EventHandler(this.jurosCompostoToolStripMenuItem_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(91, 81);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(175, 20);
+            this.textBox1.TabIndex = 2;
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(424, 343);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
             this.Text = "Calculadora Financeira";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem calculadoraFinanceiraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jurosSimplesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jurosCompostoToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

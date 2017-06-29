@@ -17,11 +17,12 @@ namespace ExeciciosComplemetares
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void jurosCompostoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Calculadora calc = new Calculadora();
 
-            calc.valorAplicado = 1000;
+            calc.valorAplicado = this.textBox1.Text();
             calc.rendPoupanca = 10;
             calc.rendRendaFixa = 10;
             calc.quantMeses = 12;
@@ -30,6 +31,6 @@ namespace ExeciciosComplemetares
             calc.ImpostoDeRenda();
             calc.TotJurosImposto();
             calc.Respostas();
+
         }
-    }
 }
