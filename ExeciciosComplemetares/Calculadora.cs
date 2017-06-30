@@ -9,8 +9,9 @@ namespace ExeciciosComplemetares
 {
     class Calculadora
     {
-        public int valorAplicado, rendPoupanca, rendRendaFixa, quantMeses;
-        public double jurosPoupanca, jurosRendaFixa, impostoDeRenda, totJurosImposto;
+        public int valorAplicado = 0, rendPoupanca = 0, rendRendaFixa = 0, quantMeses = 0;
+        public double jurosPoupanca = 0, jurosRendaFixa = 0, impostoDeRenda = 0, totJurosImposto = 0;
+        string op1 = "Poupança", op2 = "Renda Fixa";
 
         public void JurosPoupanca()
         {
@@ -55,10 +56,19 @@ namespace ExeciciosComplemetares
 
         public void Respostas()
         {
-            MessageBox.Show("O valor do rendimento para Poupança será de: " + jurosPoupanca);
-            MessageBox.Show("O valor do rendimento para Renda Fixa será de: " + jurosRendaFixa);
-            MessageBox.Show("O valor dos impostos de renda será de: " + impostoDeRenda);
-            MessageBox.Show("O valor do rendimento para Renda Fixa - Imposto de Renda será de: " + totJurosImposto);
+            MessageBox.Show("O valor do rendimento para Poupança será de: " + jurosPoupanca + "\n\nO valor do rendimento para Renda Fixa será de: " + jurosRendaFixa + "\n\nO valor dos impostos de renda será de: " + impostoDeRenda + "\n\nO valor do rendimento para Renda Fixa - Imposto de Renda será de: " + totJurosImposto);
+        }
+
+        public void MelhorOpcao()
+        {
+                if (jurosPoupanca > totJurosImposto)
+                {
+                    MessageBox.Show("A melhor opção de invesimentos é " + op1 + ".");
+                }
+                else
+                {
+                    MessageBox.Show("A melhor opção de investimento é " + op2 + ".");
+                }
         }
     }
 }

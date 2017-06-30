@@ -7,3 +7,12 @@ C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExeciciosComplemet
 C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\obj\Debug\ExeciciosComplemetares.csproj.GenerateResource.Cache
 C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\obj\Debug\ExeciciosComplemetares.exe
 C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\obj\Debug\ExeciciosComplemetares.pdb
+C:\Users\felip\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\obj\Debug\ExeciciosComplemetares.csprojResolveAssemblyReference.cache
+C:\Users\felip\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\obj\Debug\ExeciciosComplemetares.Menu.resources
+C:\Users\felip\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\obj\Debug\ExeciciosComplemetares.Properties.Resources.resources
+C:\Users\felip\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\obj\Debug\ExeciciosComplemetares.csproj.GenerateResource.Cache
+C:\Users\felip\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\obj\Debug\ExeciciosComplemetares.exe
+C:\Users\felip\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\obj\Debug\ExeciciosComplemetares.pdb
+C:\Users\felip\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\bin\Debug\ExeciciosComplemetares.exe.config
+C:\Users\felip\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\bin\Debug\ExeciciosComplemetares.exe
+C:\Users\felip\Source\Repos\ExerciciosComplementares\ExeciciosComplemetares\bin\Debug\ExeciciosComplemetares.pdb
