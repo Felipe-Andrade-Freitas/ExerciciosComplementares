@@ -25,7 +25,7 @@ namespace ExeciciosComplemetares
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Calculadora calc = new Calculadora();
+            Investimento calc = new Investimento();
 
             calc.valorAplicado = int.Parse(txtValorAplicado.Text);
             calc.rendPoupanca = int.Parse(txtJurosPoupanca.Text);

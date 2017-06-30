@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calculadora.cs" />
+    <Compile Include="Investimento.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>

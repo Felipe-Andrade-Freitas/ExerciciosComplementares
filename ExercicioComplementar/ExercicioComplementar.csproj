@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calculadora.cs" />
+    <Compile Include="Investimento.cs" />
+    <Compile Include="Poupanca.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RendaFixa.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

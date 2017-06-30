@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace ExercicioComplementar
 {
-    class Poupanca : Calculadora
+    public class Poupanca : Investimento
     {
-        public double JurosMesPoupanca { get; set; }
-        public double RendMensalPoupanca { get; set; }
-        public double RendTotalPoupanca { get; set; }
-
-
+        public void CalculaPoupanca()
+        {
+            base.CalculaRendimento();
+        }
     }
 }
