@@ -6,73 +6,71 @@ using System.Threading.Tasks;
 
 namespace ExercicioComplementar
 {
-    class Calculadora
+    public class Calculadora
     {
         #region Variaveis
 
-        public double valorAplicado { get; set; }
-        public int quantMeses { get; set; }
-        public double jurosMesPoupanca { get; set; }
-        public double jurosMesRendaFixa { get; set; }
-        public double rendMensalPoupanca { get; set; }
-        public double rendTotalPoupanca { get; set; }
-        public double rendMensalRendaFixa { get; set; }
-        public double rendMensalRendaFixaImposto { get; set; }
-        public double rendTotalRendaFixa { get; set; }
-        public double impostoDeRenda { get; set; }
+        public double ValorAplicado { get; set; }
+        public int QuantMeses { get; set; }
+        public double JurosMes { get; set; }
+        public IList<double> ListaRendimento = new List<double>();
         public string op1 = "Poupança", op2 = "Renda Fixa";
 
         #endregion
 
         #region Metodos
 
-        public void JurosCompostoPoupanca()
+        public void JurosCompostoPoupanca(double rendTotalPoupanca, double rendMensalPoupanca)
         {
-            for (int i = 0; i < quantMeses; i++)
-            {
-                rendMensalPoupanca = (valorAplicado * jurosMesPoupanca * quantMeses) / 100;
-            }
+            rendTotalPoupanca = ValorAplicado;
 
-            rendTotalPoupanca = valorAplicado + rendMensalPoupanca;
+            for (int i = 1; i <= QuantMeses; i++)
+            {
+                rendMensalPoupanca = (rendTotalPoupanca * JurosMes) / 100;
+                ListaRendimento.Add(rendMensalPoupanca);
+                rendTotalPoupanca += rendMensalPoupanca;
+            }
         }
 
-        public void JurosCompostoRendaFixa()
+        public void JurosCompostoRendaFixa(double rendTotalRendaFixa, double RendMensalRendaFixa)
         {
-            for (int i = 0; i < quantMeses; i++)
+            rendTotalRendaFixa = ValorAplicado;
+            for (int i = 0; i < QuantMeses; i++)
             {
-                rendMensalRendaFixa = (valorAplicado * quantMeses * jurosMesRendaFixa) / 100;
-                rendTotalRendaFixa = valorAplicado + rendMensalRendaFixa;
+                RendMensalRendaFixa = (rendTotalRendaFixa * JurosMes) / 100;
+                rendTotalRendaFixa += RendMensalRendaFixa;
             }
 
+            RendMensalRendaFixa = rendTotalRendaFixa - ValorAplicado;
         }
 
-        public void ImpostoDeRenda()
+        public void ImpostoDeRenda(double impostoDeRenda, double rendMensalRendaFixaIpmosto)
         {
-            if(quantMeses <= 12)
+            if(QuantMeses <= 12)
             {
                 impostoDeRenda = rendMensalRendaFixa * 0.25;
-                rendMensalRendaFixaImposto = valorAplicado - impostoDeRenda + rendMensalRendaFixa;
+                RendMensalRendaFixaImposto = ValorAplicado - impostoDeRenda + rendMensalRendaFixaIpmosto;
             }
-            else if(quantMeses > 12 && quantMeses <= 24 )
+            else if(QuantMeses > 12 && QuantMeses <= 24 )
             {
-                impostoDeRenda = rendMensalRendaFixa * 0.15;
-                rendMensalRendaFixaImposto = valorAplicado - impostoDeRenda + rendMensalRendaFixa;
+                ImpostoDeRenda = RendMensalRendaFixa * 0.15;
+                RendMensalRendaFixaImposto = ValorAplicado - ImpostoDeRenda + RendMensalRendaFixa;
             }
-            else if(quantMeses > 24 && quantMeses <= 36)
+            else if(QuantMeses > 24 && QuantMeses <= 36)
             {
-                impostoDeRenda = rendMensalRendaFixa * 0.5;
-                rendMensalRendaFixaImposto = valorAplicado - impostoDeRenda + rendMensalRendaFixa;
+                ImpostoDeRenda = RendMensalRendaFixa * 0.5;
+                RendMensalRendaFixaImposto = ValorAplicado - ImpostoDeRenda + RendMensalRendaFixa;
             }
-            else if(quantMeses > 36)
+            else if(QuantMeses > 36)
             {
-                impostoDeRenda = rendMensalRendaFixa * 0.1;
-                rendMensalRendaFixaImposto = valorAplicado - impostoDeRenda + rendMensalRendaFixa;
+                ImpostoDeRenda = RendMensalRendaFixa * 0.1;
+                RendMensalRendaFixaImposto = ValorAplicado - ImpostoDeRenda + RendMensalRendaFixa;
             }
         }
 
         public void OpcaoDeInvestimento()
         {
-            if(rendTotalPoupanca > rendMensalRendaFixaImposto)
+            if(RendTotalPoupanca > RendMensalRendaFixaImposto)
             {
                 Console.WriteLine("A melhor opção para investimento é: {0}", op1);
             }
@@ -85,13 +83,13 @@ namespace ExercicioComplementar
         public void Resposta()
         {
             Console.WriteLine("");
-            Console.WriteLine("O valor do rendimento da Poupança será de: R${0}", rendMensalPoupanca);
-            Console.WriteLine("O valor do  retorno da Poupanca será de: R${0}", rendTotalPoupanca);
+            Console.WriteLine("O valor do rendimento da Poupança será de: R${0}", RendMensalPoupanca);
+            Console.WriteLine("O valor do  retorno da Poupanca será de: R${0}", RendTotalPoupanca);
             Console.WriteLine("");
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("");
-            Console.WriteLine("O valor do rendimento da Renda Fixa será de: R${0}\nO seu imposto de renda é: R${1}", rendMensalRendaFixa, impostoDeRenda);
-            Console.WriteLine("O valor do retorno da Renda Fixa será de: R${0}", rendMensalRendaFixaImposto);
+            Console.WriteLine("O valor do rendimento da Renda Fixa será de: R${0}\nO seu imposto de renda é: R${1}", RendMensalRendaFixa, ImpostoDeRenda);
+            Console.WriteLine("O valor do retorno da Renda Fixa será de: R${0}", RendMensalRendaFixaImposto);
             Console.WriteLine("");
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("");

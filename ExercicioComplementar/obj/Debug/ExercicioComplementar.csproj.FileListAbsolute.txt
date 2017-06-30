@@ -16,3 +16,9 @@ C:\Users\felip\Source\Repos\ExerciciosComplementares\ExercicioComplementar\bin\D
 C:\Users\felip\Source\Repos\ExerciciosComplementares\ExercicioComplementar\obj\Debug\ExercicioComplementar.csprojResolveAssemblyReference.cache
 C:\Users\felip\Source\Repos\ExerciciosComplementares\ExercicioComplementar\obj\Debug\ExercicioComplementar.exe
 C:\Users\felip\Source\Repos\ExerciciosComplementares\ExercicioComplementar\obj\Debug\ExercicioComplementar.pdb
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExercicioComplementar\bin\Debug\ExercicioComplementar.exe.config
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExercicioComplementar\bin\Debug\ExercicioComplementar.exe
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExercicioComplementar\bin\Debug\ExercicioComplementar.pdb
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExercicioComplementar\obj\Debug\ExercicioComplementar.csprojResolveAssemblyReference.cache
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExercicioComplementar\obj\Debug\ExercicioComplementar.exe
+C:\Users\felipe.andrade\Source\Repos\ExerciciosComplementares\ExercicioComplementar\obj\Debug\ExercicioComplementar.pdb

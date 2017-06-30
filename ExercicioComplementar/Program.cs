@@ -11,18 +11,20 @@ namespace ExercicioComplementar
         static void Main(string[] args)
         {
             Calculadora calc = new Calculadora();
+            Poupanca poup = new Poupanca();
+            RendaFixa rendaFixa = new RendaFixa();
             
             void EntradaDeDados()
             {
                 Console.WriteLine("------------------------------------------------------");
                 Console.Write("Valor a ser aplicado: R$");
-                calc.valorAplicado = double.Parse(Console.ReadLine());
+                calc.ValorAplicado = double.Parse(Console.ReadLine());
                 Console.Write("Quantidade de Meses a ser aplicado: ");
-                calc.quantMeses = int.Parse(Console.ReadLine());
+                calc.QuantMeses = int.Parse(Console.ReadLine());
                 Console.Write("Taxa de Juros Poupança: ");
-                calc.jurosMesPoupanca = double.Parse(Console.ReadLine());
+                calc.JurosMes = double.Parse(Console.ReadLine());
                 Console.Write("Taxa de Juros Renda Fixa: ");
-                calc.jurosMesRendaFixa = double.Parse(Console.ReadLine());
+                calc.JurosMes = double.Parse(Console.ReadLine());
                 Console.WriteLine("");
                 Console.WriteLine("------------------------------------------------------");
             }
