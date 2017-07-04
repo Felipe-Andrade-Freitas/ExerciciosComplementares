@@ -27,26 +27,9 @@ namespace ExercicioComplementar
 
             for (int i = 1; i <= QuantMeses; i++)
             {
-                ValorTotal += (ValorTotal * TaxaJuros) / 100;
+                JurosMensal = (ValorTotal * TaxaJuros) / 100;
+                ValorTotal += JurosMensal;
                 ListaRendimento.Add(JurosMensal);
-            }
-        }
-
-        public void Opcao(Poupanca poupanca, RendaFixa rendaFixa, double imposto)
-        {
-            if (poupanca.ValorTotal > rendaFixa.ValorTotal)
-            {
-                MelhorInvestimento = "Poupança";
-                ValorMaior = poupanca.ValorTotal - rendaFixa.ValorTotal;
-            }
-            else if (poupanca.ValorTotal < rendaFixa.ValorTotal)
-            {
-                MelhorInvestimento = "Renda Fixa";
-                ValorMaior = poupanca.ValorTotal - imposto;
-            }
-            else
-            {
-                MelhorInvestimento = "Valores iguais";
             }
         }
     }

@@ -6,13 +6,34 @@ using System.Threading.Tasks;
 
 namespace ExercicioComplementar
 {
-    class RendaFixa : Calculadora
+    public class RendaFixa : Investimento
     {
+        public double Imposto { get; set; }
+        
+        public void CalculaRendaFixa()
+        {
+            base.CalculaRendimento();
+            this.ImpostoDeRenda();
+        }
 
-        public double JurosMesRendaFixa { get; set; }
-        public double RendMensalRendaFixa { get; set; }
-        public double RendMensalRendaFixaImposto { get; set; }
-        public double RendTotalRendaFixa { get; set; }
-        public double ImpostoDeRenda { get; set; }
+        private void ImpostoDeRenda()
+        {
+            if(QuantMeses <= 12)
+            {
+                Imposto = ValorTotal - (ValorTotal * 0.25);
+            }
+            else if (QuantMeses <= 24)
+            {
+                Imposto = ValorTotal - (ValorTotal * 0.15);
+            }
+            else if (QuantMeses <= 36)
+            {
+                Imposto = ValorTotal - (ValorTotal * 0.05);
+            }
+            else if (QuantMeses > 36)
+            {
+                Imposto = ValorTotal - (ValorTotal * 0.01);
+            }
+        }
     }
 }

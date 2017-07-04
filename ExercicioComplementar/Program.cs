@@ -29,13 +29,46 @@ namespace ExercicioComplementar
             poupanca.CalculaPoupanca();
             rendaFixa.CalculaRendaFixa();
 
-            investimento.Opcao(poupanca, rendaFixa, rendaFixa.Imposto);
+            if (poupanca.ValorTotal > rendaFixa.Imposto)
+            {
+                investimento.MelhorInvestimento = "A melhor opção é a Poupança";
+                investimento.ValorMaior = poupanca.ValorTotal - rendaFixa.Imposto;
+            }
+            else if (poupanca.ValorTotal < rendaFixa.Imposto)
+            {
+                investimento.MelhorInvestimento = "A melhor opção é a Renda Fixa";
+                investimento.ValorMaior = poupanca.ValorTotal - rendaFixa.Imposto;
+            }
+            else
+            {
+                investimento.MelhorInvestimento = "Os dois apresentam os Valores iguais";
+            }
+            
+            var x = 1;
+            Console.WriteLine("O rendimento mensal da Poupança é:\n");
+            foreach (var listaJuros in poupanca.ListaRendimento)
+            {                 
+                Console.WriteLine("O juros do mês {0} é de R${1: #0.00}", x, listaJuros);
+                x++;
+            }
 
-            Console.WriteLine("O valor do seu rendimento é de: R$ {0}", poupanca.ValorTotal);
-            Console.WriteLine("O valor do seu rendimento é de: R$ {0}", rendaFixa.ValorTotal);
-            Console.WriteLine("O valor do seu rendimento - o IR é de: R$ {0}", rendaFixa.Imposto);
-            Console.WriteLine("O melhor {0} com o  valor {1} maior ", investimento.MelhorInvestimento, investimento.ValorMaior);
             Console.WriteLine("------------------------------------------------------");
+            var y = 1;
+            Console.WriteLine("O rendimento mensal da Renda Fixa sem o desconto do IR é:\n");
+            foreach (var listaJuros in rendaFixa.ListaRendimento)
+            {
+                Console.WriteLine("O juros do mês {0} é de R${1: #0.00}", y, listaJuros);
+                y++;
+            }
+
+            Console.WriteLine("------------------------------------------------------");
+            Console.WriteLine("O valor do seu rendimento da Poupança é de: R${0: #0.00}\n", poupanca.ValorTotal);
+            Console.WriteLine("O valor do seu rendimento da Renda Fixa é de: R${0: #0.00}\n", rendaFixa.ValorTotal);
+            Console.WriteLine("O valor do seu rendimento menos o IR é de: R${0: #0.00}\n", rendaFixa.Imposto);
+            Console.WriteLine("{0} pois o  valor de diferença é de R${1: #0.00}\n", investimento.MelhorInvestimento, investimento.ValorMaior);
+            Console.WriteLine("------------------------------------------------------");
+            
+
             Console.ReadLine();
         }
     }
