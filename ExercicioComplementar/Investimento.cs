@@ -11,25 +11,27 @@ namespace ExercicioComplementar
         #region Variaveis
 
         public double ValorAplicado { get; set; }
-        public int QuantMeses { get; set; }
+        public int QuantidadeMeses { get; set; }
         public double TaxaJuros { get; set; }
         public double ValorTotal { get; set; }
-        public double JurosMensal { get; set; }
+        public double RendimentoMensal { get; set; }
         public string MelhorInvestimento { get; set; }
         public double ValorMaior { get; set; }
         public IList<double> ListaRendimento = new List<double>();
 
         #endregion
         
-        public void CalculaRendimento()
+        
+
+        public void CalcularRendimento()
         {
             ValorTotal = ValorAplicado;
 
-            for (int i = 1; i <= QuantMeses; i++)
+            for (int i = 1; i <= QuantidadeMeses; i++)
             {
-                JurosMensal = (ValorTotal * TaxaJuros) / 100;
-                ValorTotal += JurosMensal;
-                ListaRendimento.Add(JurosMensal);
+                RendimentoMensal = (ValorTotal * TaxaJuros) / 100;
+                ValorTotal += RendimentoMensal;
+                ListaRendimento.Add(RendimentoMensal);
             }
         }
     }

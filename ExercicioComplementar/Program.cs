@@ -18,7 +18,7 @@ namespace ExercicioComplementar
             Console.Write("Valor a ser aplicado: R$");
             poupanca.ValorAplicado = rendaFixa.ValorAplicado = Convert.ToDouble(Console.ReadLine());
             Console.Write("Quantidade de Meses a ser aplicado: ");
-            poupanca.QuantMeses = rendaFixa.QuantMeses = Convert.ToInt32(Console.ReadLine());
+            poupanca.QuantidadeMeses = rendaFixa.QuantidadeMeses = Convert.ToInt32(Console.ReadLine());
             Console.Write("Taxa de Juros Poupança: ");
             poupanca.TaxaJuros = Convert.ToDouble(Console.ReadLine());
             Console.Write("Taxa de Juros Renda Fixa: ");
@@ -26,8 +26,9 @@ namespace ExercicioComplementar
             Console.WriteLine("");
             Console.WriteLine("------------------------------------------------------");
             
-            poupanca.CalculaPoupanca();
-            rendaFixa.CalculaRendaFixa();
+            poupanca.CalcularPoupanca();
+            rendaFixa.CalcularRendaFixa();
+            
 
             if (poupanca.ValorTotal > rendaFixa.Imposto)
             {
@@ -37,7 +38,7 @@ namespace ExercicioComplementar
             else if (poupanca.ValorTotal < rendaFixa.Imposto)
             {
                 investimento.MelhorInvestimento = "A melhor opção é a Renda Fixa";
-                investimento.ValorMaior = poupanca.ValorTotal - rendaFixa.Imposto;
+                investimento.ValorMaior = rendaFixa.Imposto - poupanca.ValorTotal;
             }
             else
             {
@@ -64,8 +65,8 @@ namespace ExercicioComplementar
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("O valor do seu rendimento da Poupança é de: R${0: #0.00}\n", poupanca.ValorTotal);
             Console.WriteLine("O valor do seu rendimento da Renda Fixa é de: R${0: #0.00}\n", rendaFixa.ValorTotal);
-            Console.WriteLine("O valor do seu rendimento menos o IR é de: R${0: #0.00}\n", rendaFixa.Imposto);
-            Console.WriteLine("{0} pois o  valor de diferença é de R${1: #0.00}\n", investimento.MelhorInvestimento, investimento.ValorMaior);
+            Console.WriteLine("O valor do seu rendimento da Renda Fixa menos o IR é de: R${0: #0.00}\n", rendaFixa.Imposto);
+            Console.WriteLine("{0} pois o valor de diferença é de R${1: #0.00}\n", investimento.MelhorInvestimento, investimento.ValorMaior);
             Console.WriteLine("------------------------------------------------------");
             
 

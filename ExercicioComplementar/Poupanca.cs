@@ -8,9 +8,9 @@ namespace ExercicioComplementar
 {
     public class Poupanca : Investimento
     {
-        public void CalculaPoupanca()
+        public void CalcularPoupanca()
         {
-            base.CalculaRendimento();
+            base.CalcularRendimento();
         }
     }
 }

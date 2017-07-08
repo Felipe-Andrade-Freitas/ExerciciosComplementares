@@ -10,29 +10,31 @@ namespace ExercicioComplementar
     {
         public double Imposto { get; set; }
         
-        public void CalculaRendaFixa()
+        public void CalcularRendaFixa()
         {
-            base.CalculaRendimento();
-            this.ImpostoDeRenda();
+            base.CalcularRendimento();
+            this.CalcularImpostoDeRenda();
         }
 
-        private void ImpostoDeRenda()
+        
+
+        private void CalcularImpostoDeRenda()
         {
-            if(QuantMeses <= 12)
+            if(QuantidadeMeses <= 12)
             {
-                Imposto = ValorTotal - (ValorTotal * 0.25);
+                Imposto = ValorTotal - (RendimentoMensal * 0.25);
             }
-            else if (QuantMeses <= 24)
+            else if (QuantidadeMeses <= 24)
             {
-                Imposto = ValorTotal - (ValorTotal * 0.15);
+                Imposto = ValorTotal - (RendimentoMensal * 0.15);
             }
-            else if (QuantMeses <= 36)
+            else if (QuantidadeMeses <= 36)
             {
-                Imposto = ValorTotal - (ValorTotal * 0.05);
+                Imposto = ValorTotal - (RendimentoMensal * 0.05);
             }
-            else if (QuantMeses > 36)
+            else if (QuantidadeMeses > 36)
             {
-                Imposto = ValorTotal - (ValorTotal * 0.01);
+                Imposto = ValorTotal - (RendimentoMensal * 0.01);
             }
         }
     }
